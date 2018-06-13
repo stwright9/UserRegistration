@@ -11,7 +11,8 @@ namespace UserRegistration.Views
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.Web.Mvc;
+
     public partial class UserInfo
     {
         public int Id { get; set; }
@@ -23,5 +24,6 @@ namespace UserRegistration.Views
         public string State { get; set; }
         public string Zip { get; set; }
         public string Country { get; set; }
+        public IEnumerable<SelectListItem> States { get; set; }
     }
 }
