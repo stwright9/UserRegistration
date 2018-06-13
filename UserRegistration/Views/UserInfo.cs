@@ -27,7 +27,6 @@ namespace UserRegistration.Views
         [Required]
         [DisplayName("Address 1")]
         public string Address_1 { get; set; }
-        [Required]
         [DisplayName("Address 2")]
         public string Address_2 { get; set; }
         [Required]
@@ -40,7 +39,8 @@ namespace UserRegistration.Views
         public string Zip { get; set; }
         [Required]
         public string Country { get; set; }
+        public System.DateTime Created_Date { get; set; }
 
-        public IEnumerable<SelectListItem> States { get; set; }
+        public IEnumerable<SelectListItem> States { get; set; }        
     }
 }

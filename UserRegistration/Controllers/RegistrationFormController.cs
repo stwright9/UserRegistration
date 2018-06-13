@@ -21,6 +21,7 @@ namespace UserRegistration.Controllers
         public ActionResult RegistrationForm(UserInfo userInfo)
         {
             userInfo.Country = "United States";
+            userInfo.Created_Date = DateTime.Now;
             using (UserRegdbEntities dataModel = new UserRegdbEntities())
             {
                 dataModel.UserInfoes.Add(userInfo);
@@ -42,7 +43,7 @@ namespace UserRegistration.Controllers
             List<UserInfo> info = new List<UserInfo>();
             UserRegdbEntities dataModel = new UserRegdbEntities();
 
-            info = dataModel.UserInfoes.ToList();
+            info = dataModel.UserInfoes.OrderByDescending(i => i.Created_Date).ToList();
 
             return View(info);
         }

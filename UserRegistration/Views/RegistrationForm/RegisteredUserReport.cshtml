@@ -9,7 +9,6 @@
     <table class="table table-bordered">
         <thead>
             <tr>
-                <th>Id</th>
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Address 1</th>
@@ -18,22 +17,23 @@
                 <th>State</th>
                 <th>Zip</th>
                 <th>Country</th>
+                <th>Date</th>
             </tr>
         </thead>
         <tbody>
             @foreach (var item in Model)
             {
-                <tr>
-                    <th scope="row">@item.Id</th>
-                    <td>@item.First_Name</td>
-                    <td>@item.Last_Name</td>
-                    <th>@item.Address_1</th>
-                    <th>@item.Address_2</th>
-                    <th>@item.City</th>
-                    <th>@item.State</th>
-                    <th>@item.Zip</th>
-                    <th>@item.Country</th>
-                </tr>
+            <tr>
+                <th scope="row">@item.First_Name</th>
+                <td>@item.Last_Name</td>
+                <th>@item.Address_1</th>
+                <th>@item.Address_2</th>
+                <th>@item.City</th>
+                <th>@item.State</th>
+                <th>@item.Zip</th>
+                <th>@item.Country</th>
+                <th>@item.Created_Date</th>
+            </tr>
             }
         </tbody>
     </table>
