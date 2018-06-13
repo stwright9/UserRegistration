@@ -17,6 +17,25 @@ namespace UserRegistration.Controllers
             return View(userInfo);
         }
 
+        [HttpPost]
+        public ActionResult RegistrationForm(UserInfo userInfo)
+        {
+            userInfo.Country = "United States";
+            using (UserRegdbEntities dataModel = new UserRegdbEntities())
+            {
+                dataModel.UserInfoes.Add(userInfo);
+                dataModel.SaveChanges();
+            }
+
+            return RedirectToAction("Confirmation");
+        }
+
+        [HttpGet]
+        public ActionResult Confirmation()
+        {
+            return View();
+        }
+
         private IEnumerable<SelectListItem> GetListOfStates()
         {
             Dictionary<string, string> states = GetStates();
