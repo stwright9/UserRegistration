@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "RegisteredUserReport";
+}
+
+<h2>Registered User Report</h2>
+
+<div>
+    <hr />
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Address 1</th>
+                <th>Address 2</th>
+                <th>City</th>
+                <th>State</th>
+                <th>Zip</th>
+                <th>Country</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <th scope="row">@item.Id</th>
+                    <td>@item.First_Name</td>
+                    <td>@item.Last_Name</td>
+                    <th>@item.Address_1</th>
+                    <th>@item.Address_2</th>
+                    <th>@item.City</th>
+                    <th>@item.State</th>
+                    <th>@item.Zip</th>
+                    <th>@item.Country</th>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<div>
+    @Html.ActionLink("Back to Registration", "RegistrationForm")
+</div>

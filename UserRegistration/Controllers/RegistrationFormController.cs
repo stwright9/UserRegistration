@@ -36,6 +36,17 @@ namespace UserRegistration.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult RegisteredUserReport()
+        {
+            List<UserInfo> info = new List<UserInfo>();
+            UserRegdbEntities dataModel = new UserRegdbEntities();
+
+            info = dataModel.UserInfoes.ToList();
+
+            return View(info);
+        }
+
         private IEnumerable<SelectListItem> GetListOfStates()
         {
             Dictionary<string, string> states = GetStates();

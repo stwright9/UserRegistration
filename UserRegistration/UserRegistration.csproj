@@ -234,6 +234,7 @@
     </Content>
     <Content Include="Views\RegistrationForm\RegistrationForm.cshtml" />
     <Content Include="Views\RegistrationForm\Confirmation.cshtml" />
+    <Content Include="Views\RegistrationForm\RegisteredUserReport.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
