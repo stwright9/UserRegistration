@@ -6,9 +6,9 @@ using System.Web.Mvc;
 
 namespace UserRegistration.Controllers
 {
-    public class HomeController : Controller
+    public class RegistrationFormController : Controller
     {
-        public ActionResult Index()
+        public ActionResult RegistrationForm()
         {
             return View();
         }
